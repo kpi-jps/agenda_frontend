@@ -1,0 +1,16 @@
+<form [formGroup]="formUpdate" (submit)="onSubmit()"> 
+    <label>
+        Nome:
+        <input type="text" formControlName="name">
+    </label>
+    <label>
+        Email:
+        <input type="email" formControlName="email">
+    </label>
+    <label>
+        Telefone:
+        <input type="tel" formControlName="phone">
+    </label>
+    <button type="submit">Enviar</button>
+    <button type="button">Cancelar</button>
+</form>
