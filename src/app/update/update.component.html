@@ -1,3 +1,13 @@
+<!--
+<div id="alert-container" *ngIf="alert">
+    <div id="alert"></div>
+</div>
+<div id="confirm-container" *ngIf="confirm">
+    <div id="confirm">
+
+    </div>
+</div>
+-->
 <form [formGroup]="formUpdate" (submit)="onSubmit()"> 
     <label>
         Nome:
@@ -11,6 +21,6 @@
         Telefone:
         <input type="tel" formControlName="phone">
     </label>
-    <button type="submit">Enviar</button>
-    <button type="button">Cancelar</button>
+    <button class="register" type="submit" class="register">Salvar</button>
+    <button class="cancel" type="button" (click) = "cancelUpdate()" >Cancelar</button>
 </form>

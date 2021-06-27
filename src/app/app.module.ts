@@ -9,15 +9,13 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { RegisterComponent } from './register/register.component';
 import { UpdateComponent } from './update/update.component';
 import { HttpClientModule } from "@angular/common/http";
-import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactsComponent,
     RegisterComponent,
-    UpdateComponent,
-    AlertComponent
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

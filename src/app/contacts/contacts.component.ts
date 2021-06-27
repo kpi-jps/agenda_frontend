@@ -22,6 +22,10 @@ export class ContactsComponent implements OnInit {
     })
   }
 
+  initUpdate(id : string) {
+
+  }
+
   ngOnInit(): void {
     this.getContacts();
   }

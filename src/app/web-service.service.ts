@@ -17,8 +17,13 @@ export class WebServiceService {
     return this.http.get<Contact[]>(this.baseURL);
   }
 
+  //obtem um contato específico registrado no banco de dados
+  serviceGetContact(id:string) : Observable<any> {
+    return this.http.get<any>(this.baseURL + '/' + id);
+  }
+
   //registra um novo contato no banco de dados
-  registerContact(contact) : Observable<any>{
+  serviceRegisterContact(contact) : Observable<any>{
     let body = new HttpParams();
     body = body.set("name", contact.title);
     body = body.set("email", contact.email);
@@ -27,7 +32,7 @@ export class WebServiceService {
   }
 
   //atualiza um contato específico no banco de dados
-  updateContact(contact, id:string) : Observable<any>{
+  serviceUpdateContact(contact, id:string) : Observable<any>{
     let body = new HttpParams();
     body = body.set("name", contact.title);
     body = body.set("email", contact.email);
@@ -36,7 +41,7 @@ export class WebServiceService {
   }
 
   //deleta um contato específico no banco de dados
-  deleteContact(id:string) : Observable<any>{
+  serviceDeleteContact(id:string) : Observable<any>{
     return this.http.delete(this.baseURL + "/contatos/" + id, {observe: "response"});
   }
   
