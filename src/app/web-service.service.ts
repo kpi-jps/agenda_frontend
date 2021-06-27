@@ -7,14 +7,14 @@ import { Contact } from './contact';
   providedIn: 'root'
 })
 export class WebServiceService {
-  constructor( ) {}
-  //constructor(private http : HttpClient) { }
-  /*
-  baseURL = "colocar aqui o link do banco de dados do glich";
+  
+  constructor(private http : HttpClient) { }
+  
+  baseURL = "https://sc3012964.glitch.me/api/contatos/"; //já tá no glitch
 
   //obtem todos os contatos registrados no banco de dados
-  getContacts() : Observable<Contact[]> {
-    return this.http.get<Contact[]>(this.baseURL + "/contatos");
+  serviceGetContacts() : Observable<Contact[]> {
+    return this.http.get<Contact[]>(this.baseURL);
   }
 
   //registra um novo contato no banco de dados
@@ -39,5 +39,5 @@ export class WebServiceService {
   deleteContact(id:string) : Observable<any>{
     return this.http.delete(this.baseURL + "/contatos/" + id, {observe: "response"});
   }
-  */
+  
 }

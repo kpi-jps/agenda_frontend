@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Agenda';
-  description = 'Uma simples agenda feita em Angular';
-  developer = 'João Pedro da Silva'
+  title = 'Agenda de contatos';
+  description = 'Uma simples agenda de contatos feita com Angular'; 
 }

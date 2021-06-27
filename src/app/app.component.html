@@ -1,14 +1,30 @@
+<!--
 <header>
     <h1>
         {{title}}
     </h1>
-    <h3>
-        {{description}}
-    </h3>
 </header>
-<main>
+<div id="button-add-contact">+</div>
+<div id="button-top">&uarr;</div>
+<main id="main">
     <router-outlet></router-outlet>
 </main>
 <footer>
-    {{developer}}
+        {{description}}
 </footer>
+-->
+<header>
+    <div id="header-container">
+        <div id="title"> 
+            <h2> {{title}}  </h2> 
+            <h5> {{description}} </h5>
+        </div>
+        <button type="button" id="button-add-contact">+</button>
+        <form id="search-bar">
+            <input type="text" name="" placeholder="buscar contato">
+        </form>
+    </div>
+</header>
+<main id="main">
+    <router-outlet></router-outlet>
+</main>

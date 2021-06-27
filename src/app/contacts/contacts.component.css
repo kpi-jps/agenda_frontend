@@ -1,0 +1,48 @@
+.contact {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 0px;
+    background-color: #efefe4;
+    width: 90%;
+    margin: 10px auto;
+    font-size: 1.1rem;
+    
+}
+
+ul {
+    list-style: none; 
+    line-height: 25px; 
+}
+
+.button {
+    display: inline;
+    text-align: center;
+    font-size: 1.25rem;
+    width:35px;
+    height:35px;
+    border-radius: 100%;
+    margin: 10px;
+    float:right;
+    cursor: default;
+}
+
+
+.edit{
+    background-color: #65a686;
+    border: 2px solid #65a686;
+    color: #fff;
+}
+.edit:hover{
+    background-color: #fff;
+    color: #65a686;
+}
+
+.del{
+    background-color: #ff767f;
+    border: 2px solid #ff767f;
+    color: #fff;
+}
+.del:hover{
+    background-color: #fff;
+    color: #ff767f;
+}

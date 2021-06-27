@@ -1,1 +1,14 @@
-<p>contacts works!</p>
+<div class="contact" *ngFor = 'let contact of contacts'>
+    <div class="control">
+        <button type="button" class="button del"> &#10005;</button> 
+        <button type="button" class="button edit"> &#9998; </button>
+    </div>
+    <ul>
+        <li>{{contact.name}}</li>
+        <li><span class="symbol"> &#9990; </span>{{contact.phone}}</li>
+        <li><span class="symbol"> &#9993;</span> {{contact.email}}</li>
+    </ul>
+</div>
+
+
+

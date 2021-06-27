@@ -11,14 +11,21 @@ export class ContactsComponent implements OnInit {
 
   constructor(private service:WebServiceService) { }
   
-  ngOnInit(): void {
-  }
-  /*
+  
+  contacts : Contact[];
+  
   //aobtem todos os contatos registrados no banco de dados
-  getContacts() {
-
+  getContacts() : void {
+    this.service.serviceGetContacts().subscribe(response => {
+      this.contacts = response;
+      console.log(response);
+    })
   }
 
+  ngOnInit(): void {
+    this.getContacts();
+  }
+/*
   //inicia o processo de deletar um contato específico, tornando visível um elemento html,
   //semelhante a um alert, que permite concluir a tarefa
   startDeleteContact(id: string) {

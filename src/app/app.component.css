@@ -1,0 +1,137 @@
+/*
+header {
+    margin: 0 auto;
+    column-gap: 10px;
+    border: 2px solid #425686;
+    background-color: #425686; 
+    color: #f8f8f8;  
+    padding:10px; 
+    height: 80px; 
+}
+
+#button-add-contact {
+    position: fixed;
+    right: 30%;
+    top: 80px;
+    height:40px;
+    width:40px;
+    border: 3px solid #65a686;
+    border-radius: 100%;
+    background-color: #65a686; 
+    color: #f8f8f8;   
+    text-align: center; 
+    font-size: 2.2rem;
+    font-weight: bold;
+    cursor: default;
+}
+#button-add-contact:hover{
+    background-color:  #f8f8f8; 
+    color: #65a686;  
+}
+
+#button-top {
+    position: fixed;
+    right: 30%;
+    top:26%;
+    height:40px;
+    width:40px;
+    border: 3px solid #65a686;
+    border-radius: 100%;
+    background-color: #65a686; 
+    color: #f8f8f8;   
+    text-align: center; 
+    font-size: 2.1rem;
+    font-weight: bold;
+    cursor: default;
+}
+#button-top:hover{
+    background-color:  #f8f8f8; 
+    color: #65a686;  
+}
+
+main {
+    padding:10px;
+    background-color: #f8f8f8;
+    min-height:1000px;
+}
+
+footer{
+    margin: 0 auto;
+    background-color: #425686;
+    color: #f8f8f8; 
+    text-align: center;
+    padding: 10px;
+    
+}
+*/
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    margin: 0;
+    top:0;
+    left:0;
+    height: 180px;
+    overflow: hidden;
+   
+}
+#header-container {
+    height: 165px;
+    width: 50%;
+    margin: 0 auto;
+}
+#title {
+    height: 90px;
+    position: relative;
+    background-color: #425686; 
+    color: #f8f8f8;  
+    margin: 0 auto;
+    top:0;
+    padding: 10px;  
+}
+
+#search-bar {
+    height: 25px;
+    top:-46px;
+    position: relative;
+    background-color: #b6b4bc; 
+    color: #f8f8f8;  
+    margin: 0 auto;
+    padding: 15px 10px;
+}
+
+#search-bar > input {
+    border: 2px solid #425686;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 3px 8px;
+    width: 50%;
+}
+
+#button-add-contact {
+    position: relative;
+    right:-80%;
+    top: -25px;
+    height:40px;
+    width:40px;
+    border: 3px solid #6670c2;
+    border-radius: 100%;
+    background-color: #6670c2; 
+    color: #f8f8f8;   
+    text-align: center; 
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: default;
+    z-index: 2;
+}
+#button-add-contact:hover{
+    background-color:  #f8f8f8; 
+    color: #6670c2;  
+}
+
+main {
+    margin: 160px auto 20px auto;
+    background-color: #f8f8f8;
+    min-height:200px;
+    padding: 10px;
+}
