@@ -1,0 +1,39 @@
+form {
+    width:90%;
+    margin: 10px auto;
+}
+input {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #425686;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+button {
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 10px 0 0px 
+}
+
+.register{
+    background-color: #65a686;
+    border: 2px solid #65a686;
+    color: #fff;
+}
+.register:hover{
+    background-color: #fff;
+    color: #65a686;
+}
+
+.cancel{
+    background-color: #ff767f;
+    border: 2px solid #ff767f;
+    color: #fff;
+}
+.cancel:hover{
+    background-color: #fff;
+    color: #ff767f;
+}
