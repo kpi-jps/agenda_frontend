@@ -24,16 +24,18 @@ export class ContactsComponent implements OnInit {
   confirmContent : string = ''; //conteúdo do "confirm"
 
   id : string = ''; //id do contato a ser deletado
+
   //obtem todos os contatos registrados no banco de dados
   getContacts() : void {
     this.service.serviceGetContacts().subscribe(response => {
+      
       this.contacts = response;
       if (response.length == 0) {
         this.msg = true;
       }
-      console.log(response);
     })
   }
+
   //inicia o processo de deleção de um contato passando como parâmetro o "id" do mesmo
   //apresenta o elemento "confirm" 
   initDelete(id : string, name : string) {
@@ -41,9 +43,13 @@ export class ContactsComponent implements OnInit {
     this.confirmContent = 'Tem certeza que deseja deletar o contato ' + name + '.';
     this.id = id;
   }
+
+  //inicia o elemento "confirm"
   openConfirm() {
     this.confirm = true;
   }
+
+  //fecha o elemento "confirm"
   closeConfirm() {
     this.confirm = false;
     this.confirmContent = '';

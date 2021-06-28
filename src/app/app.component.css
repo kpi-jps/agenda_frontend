@@ -5,12 +5,12 @@ header {
     margin: 0;
     top:0;
     left:0;
-    height: 180px;
+    height: 130px;
     overflow: hidden;
    
 }
 #header-container {
-    height: 165px;
+    height: 120px;
     width: 50%;
     margin: 0 auto;
 }
@@ -24,23 +24,6 @@ header {
     padding: 10px;  
 }
 
-#search-bar {
-    height: 25px;
-    top:-46px;
-    position: relative;
-    background-color: #b6b4bc; 
-    color: #f8f8f8;  
-    margin: 0 auto;
-    padding: 15px 10px;
-}
-
-#search-bar > input {
-    border: 2px solid #425686;
-    border-radius: 5px;
-    font-size: 1rem;
-    padding: 3px 8px;
-    width: 50%;
-}
 
 #button-add-contact {
     position: relative;
@@ -64,7 +47,7 @@ header {
 }
 
 main {
-    margin: 160px auto 20px auto;
+    margin: 110px auto 20px auto;
     background-color: #f8f8f8;
     min-height:100px;
     padding: 10px;
