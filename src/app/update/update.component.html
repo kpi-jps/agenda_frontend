@@ -1,13 +1,8 @@
-<!--
-<div id="alert-container" *ngIf="alert">
-    <div id="alert"></div>
-</div>
-<div id="confirm-container" *ngIf="confirm">
-    <div id="confirm">
 
-    </div>
+<div id="alert-container" *ngIf="alert">
+    <div id="alert" [class.error] = "error" [class.success] = "success">{{content}}</div>
 </div>
--->
+
 <form [formGroup]="formUpdate" (submit)="onSubmit()"> 
     <label>
         Nome:

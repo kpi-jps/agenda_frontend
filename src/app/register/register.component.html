@@ -1,3 +1,6 @@
+<div id="alert-container" *ngIf="alert">
+    <div id="alert" [class.error] = "error" [class.success] = "success">{{content}}</div>
+</div>
 
 <form [formGroup]="formRegister" (submit)="onSubmit()"> 
     <label>
@@ -12,7 +15,7 @@
         Telefone:
         <input type="tel" formControlName="phone">
     </label>
-    <a routerLink="/contatos"><button class="register" type="submit" class="register">Salvar</button> </a>
-    <a routerLink="/contatos"><button class="cancel" type="button">Cancelar</button></a>
+    <button class="register" type="submit" class="register">Salvar</button> 
+    <button class="cancel" type="button" (click) = "cancelUpdate()" >Cancelar</button>
 </form>
 

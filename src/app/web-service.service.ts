@@ -19,30 +19,30 @@ export class WebServiceService {
 
   //obtem um contato específico registrado no banco de dados
   serviceGetContact(id:string) : Observable<any> {
-    return this.http.get<any>(this.baseURL + '/' + id);
+    return this.http.get<any>(this.baseURL + id);
   }
 
   //registra um novo contato no banco de dados
   serviceRegisterContact(contact) : Observable<any>{
     let body = new HttpParams();
-    body = body.set("name", contact.title);
+    body = body.set("name", contact.name);
     body = body.set("email", contact.email);
     body = body.set("phone", contact.phone);
-    return this.http.post(this.baseURL + "/contatos", body, {observe: "response"});
+    return this.http.post(this.baseURL, body, {observe: "response"});
   }
 
   //atualiza um contato específico no banco de dados
   serviceUpdateContact(contact, id:string) : Observable<any>{
     let body = new HttpParams();
-    body = body.set("name", contact.title);
+    body = body.set("name", contact.name);
     body = body.set("email", contact.email);
     body = body.set("phone", contact.phone);
-    return this.http.put(this.baseURL + "/contatos/" + id, body, {observe: "response"});
+    return this.http.put(this.baseURL + id, body, {observe: "response"});
   }
 
   //deleta um contato específico no banco de dados
   serviceDeleteContact(id:string) : Observable<any>{
-    return this.http.delete(this.baseURL + "/contatos/" + id, {observe: "response"});
+    return this.http.delete(this.baseURL + id, {observe: "response"});
   }
   
 }
