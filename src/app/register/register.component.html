@@ -5,15 +5,15 @@
 <form [formGroup]="formRegister" (submit)="onSubmit()"> 
     <label>
         Nome:
-        <input type="text" formControlName="name">
+        <input type="text" formControlName="name" [placeholder]="namePlaceHolder">
     </label>
     <label>
         Email:
-        <input type="email" formControlName="email">
+        <input type="email" formControlName="email" [placeholder]="emailPlaceHolder">
     </label>
     <label>
         Telefone:
-        <input type="tel" formControlName="phone">
+        <input type="tel" formControlName="phone" [placeholder]="phonePlaceHolder">
     </label>
     <button class="register" type="submit" class="register">Salvar</button> 
     <button class="cancel" type="button" (click) = "cancelUpdate()" >Cancelar</button>

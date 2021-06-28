@@ -66,6 +66,6 @@ header {
 main {
     margin: 160px auto 20px auto;
     background-color: #f8f8f8;
-    min-height:200px;
+    min-height:100px;
     padding: 10px;
 }

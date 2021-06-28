@@ -28,7 +28,7 @@ export class UpdateComponent implements OnInit {
   
   //retorna um contato específico passando como parâmetro o id do contato, preenchendo o formulário
   //com os dados do contato
-  getContact() {
+  getContact() : void {
     let id = this.route.snapshot.paramMap.get("id"); //retorna o id da rota
     this.service.serviceGetContact(id).subscribe(response => {
       this.contact = response;
@@ -41,12 +41,12 @@ export class UpdateComponent implements OnInit {
   }
 
   //cancela o formulário retornando para a página anterior
-  cancelUpdate() {
+  cancelUpdate() : void {
     this.location.back();
   }
 
   //dispara o alert para erros e sucesso
-  triggerAlert(msg : string, type : string) {
+  triggerAlert(msg : string, type : string) : void{
     let check : boolean = true;
     if(type == 'error') {
       check = false;
@@ -68,7 +68,7 @@ export class UpdateComponent implements OnInit {
   }
   
   //atualiza dados do contato no banco de dados
-  onSubmit() {
+  onSubmit() : void {
     let msg : string = '';
     if(this.formUpdate.get('name').valid && this.formUpdate.get('email').valid && this.formUpdate.get('phone').valid) {
       let id = this.route.snapshot.paramMap.get("id");
@@ -83,7 +83,7 @@ export class UpdateComponent implements OnInit {
           console.log('ok')
           this.triggerAlert(msg, 'success');
         } else {
-          msg = 'O contato não foi atualizado!'
+          msg = 'Erro, o contato não foi atualizado!'
           this.triggerAlert(msg, 'error');
         }
       });
@@ -100,7 +100,7 @@ export class UpdateComponent implements OnInit {
   }
   
   //inicia o formulário
-  private initForm() {
+  private initForm() : void{
     this.formUpdate = new FormGroup({
     name : new FormControl(null, [Validators.required]),
     email : new FormControl(null, [Validators.required, Validators.email]),

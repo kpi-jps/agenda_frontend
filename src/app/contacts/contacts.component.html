@@ -1,17 +1,20 @@
-<!--
-<div id="alert-container" *ngIf="alert">
-    <div id="alert"></div>
-</div>
+
 <div id="confirm-container" *ngIf="confirm">
     <div id="confirm">
-
+        <div>{{confirmContent}}</div>
+        <button type="button" class="confirm-button del" (click) = "closeConfirm()">Cancel</button>
+        <button type="button" class="confirm-button edit" (click) = "deleteContact()">Deletar</button>
     </div>
+    
 </div>
--->
 
+<div id="alert-container" *ngIf="alert">
+    <div id="alert" [class.error] = "error" [class.success] = "success">{{alertContent}}</div>
+</div>
+<div id="msg" *ngIf="msg"> {{msgContent}} </div>
 <div class="contact" *ngFor = 'let contact of contacts'>
     <div class="control">
-        <a routerLink="/contatos/"> <button type="button" class="button del"> &#10005;</button> </a>
+        <button type="button" class="button del" (click) = "initDelete(contact._id, contact.name)"> &#10005;</button>
         <a routerLink="/editar/{{contact._id}}"><button type="button" class="button edit"> &#9998; </button> </a>
     </div>
     <ul>

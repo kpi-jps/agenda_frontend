@@ -16,7 +16,9 @@ export class RegisterComponent implements OnInit {
   success : boolean = false; //controla se o "alert" será sucesso (see sucesso success = true)
   content : string = ''; //conteúdo do "alert"
   formRegister : FormGroup; //controla o formuário
-
+  namePlaceHolder : string = 'Nome';
+  emailPlaceHolder : string = 'email@email.com';
+  phonePlaceHolder : string = '(099)99999999';
   constructor(private service : WebServiceService,
               private location : Location
       ) {
@@ -24,7 +26,7 @@ export class RegisterComponent implements OnInit {
      }
   
   //registra dados de um contato no banco de dados
-  onSubmit() {
+  onSubmit() : void{
     let msg : string = '';
     if(this.formRegister.get('name').valid && this.formRegister.get('email').valid && this.formRegister.get('phone').valid) {
       let contact = {
@@ -38,7 +40,7 @@ export class RegisterComponent implements OnInit {
           console.log('ok')
           this.triggerAlert(msg, 'success');
         } else {
-          msg = 'O contato não foi salvo!'
+          msg = 'Erro, o contato não foi salvo!'
           this.triggerAlert(msg, 'error');
         }
       });
@@ -55,12 +57,12 @@ export class RegisterComponent implements OnInit {
   }
 
   //cancela o formulário retornando para a página anterior
-  cancelUpdate() {
+  cancelUpdate() : void{
     this.location.back();
   }
 
   //dispara o alert para erros e sucesso
-  triggerAlert(msg : string, type : string) {
+  triggerAlert(msg : string, type : string) : void{
     let check : boolean = true;
     if(type == 'error') {
       check = false;
@@ -82,7 +84,7 @@ export class RegisterComponent implements OnInit {
   }
   
   //inicia o formulário
-  private initForm() {
+  private initForm() : void{
     this.formRegister = new FormGroup({
     name : new FormControl(null, [Validators.required]),
     email : new FormControl(null, [Validators.required, Validators.email]),

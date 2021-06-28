@@ -5,8 +5,18 @@
     background-color: #efefe4;
     width: 90%;
     margin: 10px auto;
+    font-size: 1.1rem;   
+}
+
+#msg {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #efefe4;
+    width: 90%;
+    margin: 10px auto;
     font-size: 1.1rem;
-    
+    text-align: center;   
 }
 
 ul {
@@ -26,6 +36,12 @@ ul {
     cursor: default;
 }
 
+.confirm-button {
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 10px 0 0px
+}
 
 .edit{
     background-color: #65a686;
@@ -45,4 +61,38 @@ ul {
 .del:hover{
     background-color: #fff;
     color: #ff767f;
+}
+
+#alert-container, #confirm-container {
+    position: fixed;
+    width: 100%;
+    height:100%;
+    z-index: 1;
+    margin: 0;
+    top:0;
+    left:0;
+}
+#confirm {
+    padding: 20px 10px;
+    width: 40%;
+    margin: 20px auto;
+    background-color: #efefe4;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px lightslategray;
+}
+#alert {
+    padding: 20px 10px;
+    width: 40%;
+    margin: 20px auto;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px lightslategray;
+}
+.error {
+    background-color: #ff767f; 
+}
+.success {
+    background-color: #65a686;
 }
